@@ -1,0 +1,152 @@
+
+::-webkit-scrollbar {display: none;}
+
+html, body {
+  height: 100%;
+  overflow-y: hidden;
+}
+@media (min-width: 1720px) {
+  .modal {
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+  }
+  .modalHeader {
+    opacity: 0.8;
+    background-color: #000000;
+    border: 1px solid black;
+    padding: 2em 2em 1em 3em;
+  }
+}
+
+@media (max-width: 1720px) {
+  .modal {
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+  }
+  .modalHeader {
+    opacity: 0.8;
+    background-color: #000000;
+    border: 1px solid black;
+    padding: 2em 2em 1em 3em;
+  }
+}
+
+@media (max-width: 900px) {
+  .modal {
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+  }
+  .modalHeader {
+    opacity: 0.8;
+    background-color: #000000;
+    border: 1px solid black;
+    padding: 2em 2em 1em 3em;
+  }
+}
+
+@media (max-width: 616px) {
+  .modal {
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+  }
+  .modalHeader {
+    opacity: 0.8;
+    background-color: #000000;
+    border: 1px solid black;
+    padding: 2em 2em 1em 3em;
+  }
+}
+
+@media (max-width: 500px) {
+  .modal {
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+  }
+  .modalHeader {
+    opacity: 0.8;
+    background-color: #000000;
+    border: 1px solid black;
+    padding: 2em 2em 1em 3em;
+  }
+}
+
+@media (max-width: 425px) {
+  .modal {
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+  }
+  .modalHeader {
+    opacity: 0.8;
+    background-color: #000000;
+    border: 1px solid black;
+    padding: 2em 2em 1em 3em;
+  }
+}
+
+@media (max-width: 375px) {
+  .modal {
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+  }
+  .modalHeader {
+    opacity: 0.8;
+    background-color: #000000;
+    border: 1px solid black;
+    padding: 2em 2em 1em 3em;
+  }
+}
+@media (max-width: 320px) {
+  .modal {
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+  }
+  .modalHeader {
+    opacity: 0.8;
+    background-color: #000000;
+    border: 1px solid black;
+    padding: 2em 2em 1em 2em;
+  }
+}
+.channels{
+  background-color: black;
+  width: 100%;
+  color: white;
+  justify-content: center ;
+}
+
+.channelsLeft {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+} 
+
+.events {
+  width: 80%;
+  background-color: black;
+  display: flex;
+}
+  
+.channelsDescription {
+  font-size: 3em;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+}
+
+.closeModalDescription {
+  font-size: 1em !important;
+  color: white;
+  float: right;
+}
+
+.channelDescriptionResume{
+  font-size: medium;
+  width: 50%;
+}
