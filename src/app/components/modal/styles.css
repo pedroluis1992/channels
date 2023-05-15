@@ -5,116 +5,221 @@ html, body {
   height: 100%;
   overflow-y: hidden;
 }
-@media (min-width: 1720px) {
-  .modal {
-    width: 100%;
-    z-index: 1;
-    position: absolute;
-  }
+
+.modal {
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+}
+
+@media (min-width: 320px) {
+
   .modalHeader {
     opacity: 0.8;
     background-color: #000000;
     border: 1px solid black;
     padding: 2em 2em 1em 3em;
+  }
+  .channelsLeft {
+    position: fixed;
+    top: 326px;
+    overflow-y: scroll; 
+    height: -webkit-fill-available;
+    width: 20%; 
+  }   
+
+  .events {
+    display: flex; 
+    margin-top: 14px; 
+    height: 106.12px 
   }
 }
 
-@media (max-width: 1720px) {
-  .modal {
-    width: 100%;
-    z-index: 1;
-    position: absolute;
-  }
+@media (min-width: 375px) {
+
   .modalHeader {
     opacity: 0.8;
     background-color: #000000;
     border: 1px solid black;
     padding: 2em 2em 1em 3em;
+  }
+  .channelsLeft {
+    position: fixed;
+    top: 326px;
+    overflow-y: scroll; 
+    height: -webkit-fill-available;
+    width: 20%; 
+  }   
+
+  .events {
+    display: flex; 
+    margin-top: 14px; 
+    height: 106.12px 
   }
 }
 
-@media (max-width: 900px) {
-  .modal {
-    width: 100%;
-    z-index: 1;
-    position: absolute;
-  }
+@media (min-width: 425px) {
+
   .modalHeader {
     opacity: 0.8;
     background-color: #000000;
     border: 1px solid black;
     padding: 2em 2em 1em 3em;
+  }
+  .channelsLeft {
+    position: fixed;
+    top: 326px;
+    overflow-y: scroll; 
+    height: -webkit-fill-available;
+    width: 20%; 
+  }   
+
+  .events {
+    display: flex; 
+    margin-top: 14px; 
+    height: 106.12px 
+  }
+}
+@media (min-width: 768px) {
+
+  .modalHeader {
+    opacity: 0.8;
+    background-color: #000000;
+    border: 1px solid black;
+    padding: 2em 2em 1em 3em;
+  }
+  .channelsLeft {
+    position: fixed;
+    top: 326px;
+    overflow-y: scroll; 
+    height: -webkit-fill-available;
+    width: 20%; 
+  }   
+
+  .events {
+    display: flex; 
+    margin-top: 14px; 
+    height: 106.12px 
   }
 }
 
-@media (max-width: 616px) {
-  .modal {
-    width: 100%;
-    z-index: 1;
-    position: absolute;
-  }
+@media (min-width: 1024px) {
+
   .modalHeader {
     opacity: 0.8;
     background-color: #000000;
     border: 1px solid black;
     padding: 2em 2em 1em 3em;
+  }
+  .channelsLeft {
+    position: fixed;
+    top: 326px;
+    overflow-y: scroll; 
+    height: -webkit-fill-available;
+    width: 20%; 
+  }   
+
+  .events {
+    display: flex; 
+    margin-top: 14px; 
+    height: 106.12px 
   }
 }
 
-@media (max-width: 500px) {
-  .modal {
-    width: 100%;
-    z-index: 1;
-    position: absolute;
-  }
+@media (min-width: 1224px) {
+
   .modalHeader {
     opacity: 0.8;
     background-color: #000000;
     border: 1px solid black;
     padding: 2em 2em 1em 3em;
+  }
+  .channelsLeft {
+    position: fixed;
+    top: 288px;
+    overflow-y: scroll; 
+    height: -webkit-fill-available;
+    width: 20%; 
+  }   
+
+  .events {
+    display: flex; 
+    margin-top: 14px; 
+    height: 106.12px 
   }
 }
 
-@media (max-width: 425px) {
-  .modal {
-    width: 100%;
-    z-index: 1;
-    position: absolute;
-  }
+@media (min-width: 1440px) {
+
   .modalHeader {
     opacity: 0.8;
     background-color: #000000;
     border: 1px solid black;
     padding: 2em 2em 1em 3em;
+  }
+  .channelsLeft {
+    position: fixed;
+    top: 325px;
+    overflow-y: scroll; 
+    height: -webkit-fill-available;
+    width: 20%; 
+  }   
+
+  .events {
+    display: flex; 
+    margin-top: 14px; 
+    height: 106.12px 
   }
 }
 
-@media (max-width: 375px) {
-  .modal {
-    width: 100%;
-    z-index: 1;
-    position: absolute;
-  }
+@media (min-width: 1824px) {
+
   .modalHeader {
     opacity: 0.8;
     background-color: #000000;
     border: 1px solid black;
     padding: 2em 2em 1em 3em;
   }
-}
-@media (max-width: 320px) {
-  .modal {
-    width: 100%;
-    z-index: 1;
-    position: absolute;
+
+  .channelsLeft {
+    position: fixed;
+    top: 400px;
+    overflow-y: scroll; 
+    height: -webkit-fill-available;
+    width: 20%;
   }
+
+  .events {
+    display: flex; 
+    margin-top: 12px; 
+    height: 133.50px 
+  }
+}
+
+@media (min-width: 2560px) {
+
   .modalHeader {
     opacity: 0.8;
     background-color: #000000;
     border: 1px solid black;
-    padding: 2em 2em 1em 2em;
+    padding: 2em 2em 1em 3em;
+  }
+
+  .channelsLeft {
+    position: fixed;
+    top: 400px;
+    overflow-y: scroll; 
+    height: -webkit-fill-available;
+    width: 20%;
+  }
+
+  .events {
+    display: flex; 
+    margin-top: 12px; 
+    height: 133.50px 
   }
 }
+
 .channels{
   background-color: black;
   width: 100%;
@@ -122,17 +227,7 @@ html, body {
   justify-content: center ;
 }
 
-.channelsLeft {
-  display: flex;
-  flex-direction: column;
-  margin-right: 10px;
-} 
 
-.events {
-  width: 80%;
-  background-color: black;
-  display: flex;
-}
   
 .channelsDescription {
   font-size: 3em;
