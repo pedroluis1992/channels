@@ -1,19 +1,35 @@
 import { useState, useEffect } from "react";
 import { getHours } from "../../utils/utils";
+interface IEvent {
+  id: string
+  name: string;
+  description: string;
+  date_begin: string;
+  date_end: string;
+  duration: string;
+}
+
+interface IDataResponse {
+  response: any;
+  status: string;
+  msg: string;  
+}
 export function useFetch(url: string) {
-  const [data, setData] = useState(null);
-  const [events, setEvents ] = useState(null);
-  const [hours, setHours ] = useState([]);
+  const [data, setData] = useState<IDataResponse | null>(null);
+  const [events, setEvents ] = useState([]);
+  const [hours, setHours ] = useState<any[]>([]);
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
         let eventsArrya: any = [];
         const typeChannel = data.response.channels.map((channel: any) => channel.events);
-        setHours(getHours(typeChannel[0])); 
-        typeChannel.forEach((events) => { 
-          return events.forEach((event) => {eventsArrya.push(event)}) 
-        });
+        if(typeChannel){
+          setHours(getHours(typeChannel[0])); 
+          typeChannel.forEach((events: IEvent[]) => { 
+            return events.forEach((event: any) => {eventsArrya.push(event)}) 
+          });
+        }
         setEvents(typeChannel)
         return data
       })
