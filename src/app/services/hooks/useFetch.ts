@@ -10,33 +10,26 @@ interface IEvent {
 }
 
 interface IDataResponse {
-  response: any;
-  status: string;
-  msg: string;  
+  channels: any;
+  events: any;
+  hours: any;  
 }
 export function useFetch(url: string) {
   const [data, setData] = useState<IDataResponse | null>(null);
-  const [events, setEvents ] = useState([]);
-  const [hours, setHours ] = useState<any[]>([]);
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        let eventsArrya: any = [];
-        const typeChannel = data.response.channels.map((channel: any) => channel.events);
-        if(typeChannel){
-          setHours(getHours(typeChannel[0])); 
-          typeChannel.forEach((events: IEvent[]) => { 
-            return events.forEach((event: any) => {eventsArrya.push(event)}) 
-          });
-        }
-        setEvents(typeChannel)
-        return data
+        const dataReduce = data?.response?.channels?.reduce((acc: any, item: any) => {
+          acc.events.push(item.events)
+          delete item.events
+          delete item.group
+          acc.channels.push({...item }) 
+          return acc
+        }, {channels: [], events: []})
+        setData({...dataReduce, hours : getHours()})
+        
       })
-      .then((data) => setData(data) )
   },[url])
-  return { data, events, hours }
+  return {data}
 }
-/// reduce
-//// mandar canales sin eventos 
-//// mandar eventos solos [eventos]  

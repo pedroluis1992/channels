@@ -40,7 +40,7 @@ const Modal = ({ closeModal }: IModal) => {
   const dateFrom = "20230512000000"
 
 
-  const { data, events, hours } = useFetch(
+  const { data } = useFetch(
     `https://mfwkweb-api.clarovideo.net/services/epg/channel?device_id=web&device_category=web&device_model=web&device_type=web&device_so=Chrome&format=json&device_manufacturer=generic&authpn=webclient&authpt=tfg1h3j4k6fd7&api_version=v5.93&region=guatemala&HKS=web61144bb49d549&user_id=54343080&date_from=${dateFrom}&date_to=20230512230000&quantity=162`
     )
 
@@ -125,10 +125,10 @@ const Modal = ({ closeModal }: IModal) => {
             HOY
           </div>
           <div id={'timeBox'} style={{ height: "40px", width: "80%", display: "flex", contentVisibility: "auto", overflowX: "auto" }}>
-            {hours?.map((item: Ihour, index) => {
+            {data?.hours?.map((item: Ihour) => {
               return (
                 <>
-                  <div key={item.id} style={{ color: "white", marginRight: "93.69px" }} id={index.toString()} >{item.hour} </div>
+                  <div key={item.id} style={{ color: "white", marginRight: "93.69px" }} id={item.toString()} >{item.hour} </div>
                 </>
               )
             })
@@ -143,7 +143,7 @@ const Modal = ({ closeModal }: IModal) => {
         <div style={{ display: "flex", height: "97%" }}>
           <div style={{ height: "100%", color: "white", width: "25%", display: "flex", textAlign: "center", maxWidth: "fitContent", flexDirection: "column" }}>
             <div id={'channelsBox'} className='channelsLeft'>
-              { data?.response.channels.map((channel: IChannel) => {
+              { data?.channels.map((channel: IChannel) => {
                 return (
                   <div key={channel.id} style={{ display: "flex" }}>
                     <div style={{ display: "flex", flexDirection: "column", overflowY: "auto", width: "100%" }} >
@@ -159,7 +159,7 @@ const Modal = ({ closeModal }: IModal) => {
           </div>
           <div id={'eventsBox'} style={{ height: "100%", color: "white", width: "100%", display: "flex", textAlign: "center", maxWidth: "fitContent", overflow: "hidden", overflowY: "auto" }}>
             <div style={{height: "100%"}} >
-              {events && events?.map((channel: any) => {
+              {data && data.events?.map((channel: any) => {
                 return (
                   <div key={channel.id} style={{ display: "flex" }}>
 
