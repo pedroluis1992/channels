@@ -1,7 +1,7 @@
 import './styles.css'
 interface ICard {
-  name: String;
-  pathImage: String
+  name: string;
+  pathImage: string
 }
 
 const Card = ({ name, pathImage }: ICard) => {
